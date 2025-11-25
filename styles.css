@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fb;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Hero background */
+.hero-bg {
+  background-image: url('https://placehold.co/1200x600/0f172a/0ea5e9?text=Sanawbara+Gym');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Generic page view */
+.page-view {
+  padding: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full px-5 py-2.5 shadow-sm transition text-sm;
+}
+
+.btn-secondary {
+  @apply bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold rounded-full px-5 py-2.5 shadow-sm transition text-sm;
+}
+
+.btn-ghost {
+  @apply border border-emerald-500 text-emerald-600 hover:bg-emerald-50 font-semibold rounded-full px-5 py-2.5 text-sm;
+}
+
+/* Summary cards */
+.summary-card {
+  @apply bg-white rounded-2xl shadow-sm p-5 flex flex-col gap-2;
+}
+.summary-icon {
+  @apply inline-flex items-center justify-center rounded-full h-9 w-9 text-base font-semibold mb-1;
+}
+.summary-title {
+  @apply text-sm font-semibold text-slate-800;
+}
+.summary-text {
+  @apply text-xs text-slate-500;
+}
+
+/* Section title */
+.section-title {
+  @apply text-2xl font-bold text-slate-800;
+}
+
+/* Forms */
+.form-card {
+  @apply bg-white rounded-3xl shadow-md p-6 sm:p-7;
+}
+.form-title {
+  @apply text-2xl font-bold text-slate-800;
+}
+.form-subtitle {
+  @apply text-xs text-slate-500 mt-1;
+}
+.form-label {
+  @apply block text-xs font-semibold text-slate-600 mb-1.5;
+}
+.form-input {
+  @apply w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/60 focus:border-emerald-500 bg-white;
+}
+.form-message {
+  @apply rounded-lg px-3 py-2 text-xs;
+}
+.demo-box {
+  @apply mt-3 rounded-xl bg-slate-50 border border-slate-100 px-3 py-2;
+}
