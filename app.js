@@ -36,7 +36,7 @@ function showLoading(show) {
 }
 
 function displayFormMessage(viewId, message, type) {
-    const msgElement = document.getElementById(${viewId}-message);
+ const msgElement = document.getElementById(`${viewId}-message`);
     if (!msgElement) return;
 
     msgElement.textContent = message;
@@ -63,11 +63,11 @@ window.showView = function (viewName) {
         section.classList.add('hidden');
     });
 
-    const targetView = document.getElementById(view-${viewName});
+const targetView = document.getElementById(`view-${viewName}`);
     if (targetView) {
         targetView.classList.remove('hidden');
     } else {
-        console.error(View not found: view-${viewName});
+        console.error(`View not found: view-${viewName}`);
         const homeView = document.getElementById('view-home');
         if (homeView) homeView.classList.remove('hidden');
     }

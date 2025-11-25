@@ -1038,7 +1038,7 @@
     bookings.push(booking);
     saveBookings();
 
-    showMessage('booking-message', Booking created! Status: ${status}., 'success');
+    showMessage('booking-message', `Booking created! Status: ${status}.`, 'success');
     renderClassesList();
     renderUserDashboard();
     renderAdminDashboard();
@@ -1059,7 +1059,7 @@
     tbody.innerHTML = '';
 
     const myBookings = bookings.filter(b => b.userId === currentUser.id);
-    count.textContent = ${myBookings.length} booking(s);
+   count.textContent = `${myBookings.length} booking(s)`;
 
     myBookings.forEach(b => {
       const cls = classes.find(c => c.id === b.classId);
