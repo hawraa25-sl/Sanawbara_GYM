@@ -90,3 +90,106 @@ body {
 .demo-box {
   @apply mt-3 rounded-xl bg-slate-50 border border-slate-100 px-3 py-2;
 }
+ 
+/* Filters */
+.filter-input {
+  @apply rounded-full border border-slate-200 px-3 py-1.5 text-xs text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/60 focus:border-emerald-500 bg-white;
+}
+
+/* Rules list */
+.rules-list {
+  @apply list-disc list-inside space-y-1 text-xs text-slate-600;
+}
+
+/* Badges */
+.badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wide;
+}
+.badge-green {
+  @apply bg-emerald-50 text-emerald-700;
+}
+.badge-amber {
+  @apply bg-amber-50 text-amber-700;
+}
+.badge-rose {
+  @apply bg-rose-50 text-rose-700;
+}
+
+/* Mobile nav btn */
+.mobile-nav-btn {
+  @apply block w-full text-left py-2 px-3 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50;
+}
+
+/* Navbar links */
+.nav-link {
+  @apply text-slate-600 hover:text-emerald-600 transition;
+}
+
+/* Admin dashboard */
+.admin-stat-card {
+  @apply bg-white rounded-2xl shadow-sm p-4 flex flex-col gap-1;
+}
+.admin-stat-label {
+  @apply text-[11px] text-slate-500 uppercase tracking-wide;
+}
+.admin-stat-value {
+  @apply text-xl font-extrabold text-slate-800;
+}
+.admin-tab-btn {
+  @apply px-3 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 font-semibold;
+}
+.admin-tab-btn.active {
+  @apply bg-emerald-600 text-white border-emerald-600;
+}
+.admin-tab-panel {
+  @apply bg-white rounded-2xl shadow-sm p-4;
+}
+.admin-table {
+  @apply overflow-x-auto border border-slate-100 rounded-xl bg-white;
+}
+.admin-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-table th,
+.admin-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+.admin-table th {
+  @apply text-[11px] font-semibold text-slate-500 uppercase tracking-wide bg-slate-50;
+}
+
+/* Small helper classes (using plain CSS so file works even without Tailwind processing) */
+.btn-primary,
+.btn-secondary,
+.btn-ghost,
+.summary-card,
+.summary-icon,
+.summary-title,
+.summary-text,
+.section-title,
+.form-card,
+.form-title,
+.form-subtitle,
+.form-label,
+.form-input,
+.form-message,
+.demo-box,
+.filter-input,
+.rules-list,
+.badge,
+.badge-green,
+.badge-amber,
+.badge-rose,
+.mobile-nav-btn,
+.nav-link,
+.admin-stat-card,
+.admin-stat-label,
+.admin-stat-value,
+.admin-tab-btn,
+.admin-tab-panel,
+.admin-table {
+  /* Tailwind classes are applied via CDN, so no extra CSS needed here beyond utilities. */
+}
