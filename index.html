@@ -847,11 +847,13 @@
   }
 
   function renderClassesFilters() {
-    const trainerSelect = document.getElementById('filter-trainer');
-    const uniqueTrainers = [...new Set(classes.map(c => c.trainer))];
-    trainerSelect.innerHTML = '<option value="">All Trainers</option>' +
-      uniqueTrainers.map(t => <option value="${t}">${t}</option>).join('');
-  }
+  const trainerSelect = document.getElementById('filter-trainer');
+  const uniqueTrainers = [...new Set(classes.map(c => c.trainer))];
+
+  trainerSelect.innerHTML =
+    '<option value="">All Trainers</option>' +
+    uniqueTrainers.map(t => `<option value="${t}">${t}</option>`).join('');
+}
 
   function renderClassesList() {
     const container = document.getElementById('classes-list');
