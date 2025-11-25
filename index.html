@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sanawbara Gym – Digital Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="data:image/webp;base64,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">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f3f4f6;
+    }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f3f4f6; }
+    ::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+    .hero-bg {
+      background-image: linear-gradient(to right, rgba(16, 185, 129, 0.8), rgba(37, 99, 235, 0.85)),
+                        url("https://placehold.co/1600x900/020617/ffffff?text=Sanawbara+Gym");
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Simple tag badge */
+    .tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    /* Footer marquee */
+    .marquee { position: relative; overflow: hidden; white-space: nowrap; }
+    .marquee-track {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 18s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.333%); }
+    }
+    .animate-marquee {
+      display: inline-block;
+      min-width: 300%;
+      animation: marquee 18s linear infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- NAVBAR -->
+<header class="bg-white/90 backdrop-blur border-b border-gray-200 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <button onclick="showView('home')" class="flex items-center space-x-1">
+        <span class="text-2xl font-extrabold text-gray-900">
+          <span class="text-emerald-500">Sana</span>wbara
+        </span>
+        <span class="tag px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 ml-1">
+          Gym
+        </span>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <button class="nav-link text-gray-600 hover:text-emerald-600" data-view="home" onclick="showView('home')">Home</button>
+        <button class="nav-link text-gray-600 hover:text-emerald-600" data-view="classes" onclick="showView('classes')">Classes</button>
+        <button class="nav-link text-gray-600 hover:text-emerald-600" data-view="trainers" onclick="showView('trainers')">Trainers</button>
+        <button class="nav-link text-gray-600 hover:text-emerald-600" data-view="memberships" onclick="showView('memberships')">Memberships</button>
+        <button class="nav-link text-gray-600 hover:text-emerald-600" data-view="about" onclick="showView('about')">About Us</button>
+        <button class="nav-link text-gray-600 hover:text-emerald-600" data-view="contact" onclick="showView('contact')">Contact</button>
+        <button id="admin-nav-link" class="hidden text-gray-600 hover:text-emerald-600" data-view="admin" onclick="showView('admin')">Admin</button>
+        <button id="user-dashboard-link" class="hidden text-gray-600 hover:text-emerald-600" data-view="user-dashboard" onclick="showView('user-dashboard')">My Dashboard</button>
+      </nav>
+
+      <!-- Auth / User -->
+      <div class="flex items-center space-x-3">
+        <div id="auth-controls" class="flex items-center space-x-2">
+          <button onclick="showView('login')" class="px-4 py-1.5 text-xs font-medium border border-emerald-500 text-emerald-600 rounded-full hover:bg-emerald-50">
+            Login
+          </button>
+          <button onclick="showView('register')" class="px-4 py-1.5 text-xs font-medium bg-emerald-500 text-white rounded-full hover:bg-emerald-600">
+            Register
+          </button>
+        </div>
+        <div id="user-controls" class="hidden items-center space-x-2">
+          <div class="text-xs text-gray-600">
+            <div class="font-semibold" id="user-name-display">User</div>
+            <div class="text-[10px] text-gray-400" id="user-role-display">member</div>
+          </div>
+          <button onclick="handleLogout()" class="px-3 py-1.5 text-xs font-medium bg-red-500 text-white rounded-full hover:bg-red-600">
+            Logout
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-600 hover:text-emerald-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 bg-white border-t border-gray-200">
+    <div class="px-4 py-2 space-y-1 text-sm font-medium">
+      <button class="block w-full text-left py-1.5 text-gray-700" onclick="showView('home')">Home</button>
+      <button class="block w-full text-left py-1.5 text-gray-700" onclick="showView('classes')">Classes</button>
+      <button class="block w-full text-left py-1.5 text-gray-700" onclick="showView('trainers')">Trainers</button>
+      <button class="block w-full text-left py-1.5 text-gray-700" onclick="showView('memberships')">Memberships</button>
+      <button class="block w-full text-left py-1.5 text-gray-700" onclick="showView('about')">About Us</button>
+      <button class="block w-full text-left py-1.5 text-gray-700" onclick="showView('contact')">Contact</button>
+      <button id="mobile-admin-link" class="hidden block w-full text-left py-1.5 text-gray-700" onclick="showView('admin')">Admin</button>
+      <button id="mobile-user-dashboard-link" class="hidden block w-full text-left py-1.5 text-gray-700" onclick="showView('user-dashboard')">My Bookings </button>
+      <div class="border-t border-gray-200 mt-2 pt-2 flex space-x-2">
+        <button onclick="showView('login')" class="flex-1 py-1.5 border border-emerald-500 text-emerald-600 rounded-full text-xs">Login</button>
+        <button onclick="showView('register')" class="flex-1 py-1.5 bg-emerald-500 text-white rounded-full text-xs">Register</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- LOADING OVERLAY -->
+<div id="loading-overlay" class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+  <div class="w-16 h-16 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin"></div>
+</div>
+
+<!-- MAIN -->
+<main class="flex-1">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+    <!-- HOME -->
+    <section id="view-home" class="view space-y-10">
+      <!-- Hero -->
+      <div class="hero-bg rounded-3xl text-white px-6 py-12 md:px-12 md:py-16 flex flex-col md:flex-row items-center gap-10 shadow-xl">
+        <div class="flex-1 space-y-5">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 text-xs uppercase tracking-[0.18em]">
+            DIGITAL TRANSFORMATION · SANAWBARA
+          </span>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+            Train smarter with <span class="text-emerald-300">Sanawbara</span> Gym’s online booking & payments.
+          </h1>
+          <p class="text-sm md:text-base text-gray-100 max-w-xl">
+            Real-time schedules, role-based access for customers and admins, and flexible payments using Wish Money or in-person at the gym.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="showView('classes')" class="px-6 py-2.5 bg-white text-emerald-600 text-sm font-semibold rounded-full shadow hover:bg-gray-100">
+              Explore Classes
+            </button>
+            <button onclick="showView('register')" class="px-6 py-2.5 border border-white/60 text-sm font-semibold rounded-full hover:bg-white/10">
+              Create Account
+            </button>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-gray-100/80 pt-3">
+            <div>
+              <div class="font-semibold text-white">Role-based access</div>
+              <div>Customer & Admin portals</div>
+            </div>
+            <div>
+              <div class="font-semibold text-white">Smart booking</div>
+              <div>Capacity control & statuses</div>
+            </div>
+            <div>
+              <div class="font-semibold text-white">Payment</div>
+              <div>Wish Money & In-Person</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-80 bg-white/10 rounded-2xl p-4 space-y-3">
+          <h3 class="text-sm font-semibold mb-1">Next classes (sample)</h3>
+          <div id="home-classes-list" class="space-y-2 text-xs">
+            <!-- JS injects -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Key features -->
+
+      <div class="space-y-4">
+        
+      <h2 class="text-2xl font-bold text-gray-900 text-center mb-6">Why Choose Us</h2>
+
+      <!-- Key features -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 text-center">
+          <div class="text-4xl mb-3">🏅</div>
+          <h3 class="font-semibold mb-2 text-gray-800 text-lg">Certified Experts</h3>
+          <p class="text-sm text-gray-600">
+            Train with the best. All our staff are certified and dedicated to your success.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 text-center">
+          <div class="text-4xl mb-3">📅</div>
+          <h3 class="font-semibold mb-2 text-gray-800 text-lg">Easy Scheduling</h3>
+          <p class="text-sm text-gray-600">
+            Book your next class instantly online with our simple and flexible booking system.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 text-center">
+          <div class="text-4xl mb-3">🏋️‍♀️</div>
+          <h3 class="font-semibold mb-2 text-gray-800 text-lg">State‑of‑the‑Art Gym</h3>
+          <p class="text-sm text-gray-600">
+            Enjoy the latest equipment and a clean, spacious environment for your workouts.
+          </p>
+        </div>
+      </div>
+
+      </div>
+
+
+</section>
+
+    <!-- CLASSES -->
+    <section id="view-classes" class="view hidden space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900">Classes & Schedule</h2>
+          <p class="text-sm text-gray-500">Browse available sessions and book instantly.</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <select id="filter-type" class="px-3 py-1.5 border border-gray-200 rounded-full">
+            <option value="">All Types</option>
+            <option value="Pilates">Pilates</option>
+            <option value="Cardio">Cardio</option>
+            <option value="Strength">Strength</option>
+            <option value="Yoga">Yoga</option>
+          </select>
+          <select id="filter-trainer" class="px-3 py-1.5 border border-gray-200 rounded-full">
+            <option value="">All Trainers</option>
+          </select>
+          <input id="filter-search" type="search" placeholder="Search by title..." class="px-3 py-1.5 border border-gray-200 rounded-full w-40 md:w-56" />
+        </div>
+      </div>
+
+      <div id="classes-list" class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <!-- JS injects cards -->
+      </div>
+      <p id="classes-empty" class="hidden text-xs text-gray-500">No classes match your filters.</p>
+    </section>
+
+    <!-- TRAINERS -->
+    <section id="view-trainers" class="view hidden space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900">Our Trainers</h2>
+      <p class="text-sm text-gray-500 max-w-xl">
+        Certified professionals specialized in Pilates, strength, cardio, and performance coaching.
+      </p>
+      <div id="trainers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- JS injects -->
+      </div>
+    </section>
+
+    <!-- MEMBERSHIPS -->
+    <section id="view-memberships" class="view hidden space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900">Membership Plans</h2>
+      <p class="text-sm text-gray-500 max-w-xl">
+        Plans modeled from your report: basic access, more classes, and pro-level support. Payment can be handled via Wish Money or In-Person.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 flex flex-col">
+          <div class="text-xs font-semibold text-gray-500 uppercase mb-1">Basic</div>
+          <div class="text-2xl font-bold mb-2">$20 / month</div>
+          <ul class="text-sm text-gray-600 space-y-1 flex-1">
+            <li>• Gym access</li>
+            <li>• Equipment only  / month</li>
+            <li>• Standard support</li>
+          </ul>
+          <button onclick="showView('register')" class="mt-3 px-4 py-2 rounded-full text-xs font-semibold border border-emerald-500 text-emerald-600 hover:bg-emerald-50">
+            Choose Basic
+          </button>
+        </div>
+        <div class="bg-emerald-600 text-white rounded-2xl shadow-md p-5 flex flex-col relative overflow-hidden">
+          <span class="absolute top-3 right-3 text-[10px] bg-white/20 px-2 py-0.5 rounded-full uppercase tracking-[0.16em]">POPULAR</span>
+          <div class="text-xs font-semibold uppercase mb-1">Premium</div>
+          <div class="text-2xl font-bold mb-2">$50 / month</div>
+          <ul class="text-sm text-emerald-50 space-y-1 flex-1">
+        <li>• Access to classes only (subject to capacity)</li>
+        <li>• WhatsApp community access with daily updates</li>
+        <li>• Direct trainer chat support and guidance</li>
+          </ul>
+          <button onclick="showView('register')" class="mt-3 px-4 py-2 rounded-full text-xs font-semibold bg-white text-emerald-600 hover:bg-gray-100">
+            Choose Premium
+          </button>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 flex flex-col">
+          <div class="text-xs font-semibold text-gray-500 uppercase mb-1">Pro</div>
+          <div class="text-2xl font-bold mb-2">$35 / month</div>
+          <ul class="text-sm text-gray-600 space-y-1 flex-1">
+            <li>• Access to classes only (subject to capacity)</li>
+        <li>• WhatsApp community access with daily updates</li>
+        <li>• Direct trainer chat support and guidance</li>
+          </ul>
+          <button onclick="showView('register')" class="mt-3 px-4 py-2 rounded-full text-xs font-semibold border border-emerald-500 text-emerald-600 hover:bg-emerald-50">
+            Choose Pro
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="view-about" class="view hidden space-y-10">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+        <div>
+          <h2 class="text-3xl font-extrabold text-gray-900">About Sanawbara Gym</h2>
+          <p class="text-sm text-gray-500 max-w-2xl">
+            A friendly space in Bir Al Bed where women train, move, and feel stronger every day.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="showView('classes')" class="px-5 py-2 rounded-full text-xs font-semibold bg-emerald-500 text-white hover:bg-emerald-600 shadow-sm">
+            View Schedule
+          </button>
+          <button onclick="showView('contact')" class="px-5 py-2 rounded-full text-xs font-semibold border border-emerald-500 text-emerald-600 hover:bg-emerald-50">
+            Visit Us
+          </button>
+        </div>
+      </div>
+
+      <!-- About hero -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?q=80&w=1600&auto=format&fit=crop"
+            alt="Sanawbara Gym"
+            class="w-full h-80 md:h-[420px] object-cover rounded-3xl shadow-lg"
+          />
+          <div class="absolute -bottom-4 left-4 bg-white rounded-2xl px-4 py-3 shadow-md border border-gray-100 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-md bg-emerald-500/10 border border-emerald-200 flex items-center justify-center text-emerald-700 text-xs font-bold">S</div>
+            <div class="text-xs">
+              <div class="font-bold text-gray-900">Women‑focused studio</div>
+              <div class="text-gray-500">Pilates · Cardio · Yoga · Fitness</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Sanawbara Gym was built to make training simple and motivating. Whether you’re a beginner
+            or already active, we help you stay consistent with supportive coaches and classes that fit your day.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+              <div class="text-xs font-semibold text-emerald-700 mb-1">Our Mission</div>
+              <p class="text-sm text-gray-600">
+                Help every member feel confident, healthy, and strong through safe training and positive energy.
+              </p>
+            </div>
+            <div class="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+              <div class="text-xs font-semibold text-sky-700 mb-1">Our Promise</div>
+              <p class="text-sm text-gray-600">
+                Clean space, modern equipment, and classes that respect your goals and time.
+              </p>
+            </div>
+          </div>
+
+          <ul class="text-sm text-gray-700 space-y-2 pt-2">
+            <li class="flex items-start gap-2">
+              <span class="mt-0.5 w-2 h-2 rounded-full bg-emerald-500"></span>
+              Certified coaches guiding you step‑by‑step.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-0.5 w-2 h-2 rounded-full bg-sky-500"></span>
+              Small group classes for better attention.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-0.5 w-2 h-2 rounded-full bg-orange-500"></span>
+              Flexible schedule that matches your routine.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+          <div class="text-2xl font-extrabold text-gray-900">5+</div>
+          <div class="text-xs text-gray-500 mt-1">Weekly Class Types</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+          <div class="text-2xl font-extrabold text-gray-900">2</div>
+          <div class="text-xs text-gray-500 mt-1">Certified Coaches</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+          <div class="text-2xl font-extrabold text-gray-900">Bir Al Bed</div>
+          <div class="text-xs text-gray-500 mt-1">Easy to Reach</div>
+        </div>
+      </div>
+
+      <!-- Mini gallery -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <img class="h-36 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="gym" />
+        <img class="h-36 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" alt="training" />
+        <img class="h-36 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" alt="pilates" />
+        <img class="h-36 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?q=80&w=800&auto=format&fit=crop" alt="yoga" />
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="view-contact" class="view hidden space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900">Contact & Location</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 space-y-3 text-sm text-gray-600">
+          <p><strong>Location:</strong> Bir Al bed </p>
+          <p><strong>Phone:</strong> +961 70 000 000</p>
+          <p><strong>Email:</strong> info@sanawbara-gym.com</p>
+          <p><strong>Opening hours:</strong> Mon–Sat 7:00–22:00</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 space-y-3 text-sm">
+          <h3 class="font-semibold text-gray-800">Find us on the map</h3>
+          <div class="w-full aspect-video rounded-xl overflow-hidden border border-gray-100">
+            <iframe
+              class="w-full h-full"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+               src="https://www.google.com/maps?q=VG46+WJR+Sanawbara,+Haret+Hreik&hl=en&z=16&output=embed">
+            </iframe>
+          </div>
+        </div>
+        <form class="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 space-y-3 text-sm">
+          <h3 class="font-semibold text-gray-800">Send us a message</h3>
+          <input type="text" placeholder="Full name" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          <input type="email" placeholder="Email" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          <textarea placeholder="Your message" rows="3" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs"></textarea>
+          <button type="button" class="px-4 py-2 rounded-full bg-emerald-500 text-white text-xs font-semibold hover:bg-emerald-600">
+            Send  
+          </button>
+        </form></div>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="view-login" class="view hidden max-w-md mx-auto">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 space-y-4">
+        <h2 class="text-xl font-bold text-gray-900 text-center">Login</h2>
+        <div id="login-message" class="hidden text-xs px-3 py-2 rounded-lg"></div>
+        <form id="login-form" class="space-y-3 text-sm">
+          <div>
+            <label class="block text-xs font-medium text-gray-600 mb-1">Email</label>
+            <input type="email" id="login-email" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-600 mb-1">Password</label>
+            <input type="password" id="login-password" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          </div>
+          <button type="submit" class="w-full py-2 rounded-full bg-emerald-500 text-white text-xs font-semibold hover:bg-emerald-600">
+            Login
+          </button>
+        </form>
+        <p class="text-center text-xs text-gray-500">
+          Don’t have an account?
+          <button onclick="showView('register')" class="text-emerald-600 font-semibold">Register</button>
+        </p>
+      </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="view-register" class="view hidden max-w-md mx-auto">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 space-y-4">
+        <h2 class="text-xl font-bold text-gray-900 text-center">Create Account</h2>
+        <div id="register-message" class="hidden text-xs px-3 py-2 rounded-lg"></div>
+        <form id="register-form" class="space-y-3 text-sm">
+          <div>
+            <label class="block text-xs font-medium text-gray-600 mb-1">Full Name</label>
+            <input type="text" id="reg-name" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-600 mb-1">Email</label>
+            <input type="email" id="reg-email" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-600 mb-1">Password</label>
+            <input type="password" id="reg-password" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-600 mb-1">Role</label>
+            <select id="reg-role" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs">
+              <option value="customer">Customer / Member</option>
+              <option value="admin">Admin</option>
+            </select>
+            <p class="mt-1 text-[10px] text-gray-400">In a real system, admin accounts would be created by the organization, not by self-registration.</p>
+          </div>
+          <button type="submit" class="w-full py-2 rounded-full bg-emerald-500 text-white text-xs font-semibold hover:bg-emerald-600">
+            Create Account
+          </button>
+        </form>
+        <p class="text-center text-xs text-gray-500">
+          Already have an account?
+          <button onclick="showView('login')" class="text-emerald-600 font-semibold">Login</button>
+        </p>
+      </div>
+    </section>
+
+    <!-- USER DASHBOARD -->
+    <section id="view-user-dashboard" class="view hidden space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900">My Bookings</h2>
+      <p class="text-sm text-gray-500">View your upcoming bookings and payment status.</p>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
+        <div class="px-4 py-3 border-b border-gray-100 flex items-center justify-between text-xs text-gray-500">
+          <span>My bookings</span>
+          <span id="user-booking-count"></span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-xs">
+            <thead class="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Class</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Date</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Time</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Payment</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Status</th>
+              </tr>
+            </thead>
+            <tbody id="user-bookings-body" class="divide-y divide-gray-100">
+              <!-- JS injects -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN DASHBOARD -->
+    <section id="view-admin" class="view hidden space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900">Admin Dashboard</h2>
+      <p class="text-sm text-gray-500"> </p>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
+        <div class="bg-white border border-gray-100 rounded-xl p-4">
+          <p class="text-gray-500 mb-1">Members</p>
+          <p id="admin-stat-members" class="text-xl font-bold">0</p>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-xl p-4">
+          <p class="text-gray-500 mb-1">Classes</p>
+          <p id="admin-stat-classes" class="text-xl font-bold">0</p>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-xl p-4">
+          <p class="text-gray-500 mb-1">Bookings</p>
+          <p id="admin-stat-bookings" class="text-xl font-bold">0</p>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-xl p-4">
+          <p class="text-gray-500 mb-1">Confirmed (Wish & In-Person)</p>
+          <p id="admin-stat-confirmed" class="text-xl font-bold">0</p>
+        </div>
+      </div>
+
+      <!-- Manage classes -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100">
+        <div class="px-4 py-3 border-b border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-gray-700">Classes</span>
+          <button id="admin-add-class" class="px-3 py-1.5 rounded-full bg-emerald-500 text-white text-[11px] font-semibold hover:bg-emerald-600">
+            + Add Class
+          </button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-xs">
+            <thead class="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Title</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Trainer</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Type</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Date</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Time</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Price</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Capacity</th>
+                <th class="px-4 py-2"></th>
+              </tr>
+            </thead>
+            <tbody id="admin-classes-body" class="divide-y divide-gray-100">
+              <!-- JS injects -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Bookings -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100">
+        <div class="px-4 py-3 border-b border-gray-100 text-xs font-semibold text-gray-700">
+          Bookings & Payments
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-xs">
+            <thead class="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Member</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Class</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Date</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Payment</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Status</th>
+                <th class="px-4 py-2"></th>
+              </tr>
+            </thead>
+            <tbody id="admin-bookings-body" class="divide-y divide-gray-100">
+              <!-- JS injects -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Members -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100">
+        <div class="px-4 py-3 border-b border-gray-100 text-xs font-semibold text-gray-700">
+          Members
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-xs">
+            <thead class="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Name</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Email</th>
+                <th class="text-left px-4 py-2 text-gray-600 font-medium">Role</th>
+              </tr>
+            </thead>
+            <tbody id="admin-members-body" class="divide-y divide-gray-100">
+              <!-- JS injects -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+
+  </div>
+</main>
+</body>
+</html>
